@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AniBee Blog – Early learning, parenting tips, and preschool guidance." />
+  <title>AniBee Blog</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --yellow: #FFD84D;
+      --cream: #FFF9EC;
+      --green: #2E8B57;
+      --text: #333;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background: #fff;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--cream);
+      padding: 24px 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Fredoka One', cursive;
+      color: var(--green);
+      font-size: 2.2rem;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    /* TAG */
+    .tag {
+      background: var(--yellow);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    /* FEATURED */
+    .featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .featured img {
+      width: 100%;
+      border-radius: 18px;
+    }
+
+    .featured h3 {
+      font-size: 1.6rem;
+    }
+
+    /* BLOG GRID */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    .read {
+      font-weight: 600;
+      color: var(--green);
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 24px;
+      background: var(--yellow);
+      border-radius: 30px;
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* BRAND MARQUEE */
+    .brand-marquee {
+      position: relative;
+      overflow: hidden;
+      height: 320px;
+      background: var(--cream);
+      margin: 80px 0;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: scroll-marquee 35s linear infinite;
+    }
+
+    .marquee-track img {
+      width: 280px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 20px;
+      border-radius: 16px;
+      opacity: 0.35;
+    }
+
+    .brand-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .brand-overlay img {
+      width: 140px;
+      margin-bottom: 12px;
+    }
+
+    .brand-overlay h3 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.6rem;
+      color: var(--green);
+    }
+
+    .brand-overlay p {
+      font-size: 0.95rem;
+      max-width: 260px;
+    }
+
+    @keyframes scroll-marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* NEWSLETTER */
+    .newsletter {
+      background: var(--cream);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .newsletter input {
+      padding: 12px;
+      width: 260px;
+      max-width: 80%;
+      border-radius: 30px;
+      border: 1px solid #ccc;
+    }
+
+    .newsletter button {
+      padding: 12px 20px;
+      border-radius: 30px;
+      border: none;
+      background: var(--yellow);
+      font-weight: 700;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--green);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .featured { grid-template-columns: 1fr; }
+      .hero h2 { font-size: 1.6rem; }
+      .brand-marquee { height: 260px; }
+      .marquee-track img { width: 220px; height: 160px; }
+      .brand-overlay img { width: 110px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>AniBee Blog</h1>
+  <p>Ideas that support your child’s early years</p>
+</header>
+
+<section class="hero">
+  <h2>The AniBee Journal</h2>
+  <p>Trusted parenting tips and early learning guidance.</p>
+</section>
+
+<section class="featured container">
+  <img src="https://via.placeholder.com/900x500" alt="">
+  <div>
+    <span class="tag">Early Learning</span>
+    <h3>How Play-Based Learning Helps Preschool Children</h3>
+    <p>Play is not a break from learning. It is how children grow.</p>
+    <a href="#" class="btn">Read Article</a>
+  </div>
+</section>
+
+<!-- BRAND MARQUEE SECTION -->
+<section class="brand-marquee">
+  <div class="marquee-track">
+    <img src="https://via.placeholder.com/300x200?text=Classroom">
+    <img src="https://via.placeholder.com/300x200?text=Play+Time">
+    <img src="https://via.placeholder.com/300x200?text=Activities">
+    <img src="https://via.placeholder.com/300x200?text=Learning">
+    <img src="https://via.placeholder.com/300x200?text=Classroom">
+    <img src="https://via.placeholder.com/300x200?text=Play+Time">
+  </div>
+
+  <div class="brand-overlay">
+    <img src="https://via.placeholder.com/180x180?text=AniBee+Logo">
+    <h3>AniBee Preschool</h3>
+    <p>Where little minds grow with care</p>
+  </div>
+</section>
+
+<section class="blog-grid container">
+  <article class="card">
+    <img src="https://via.placeholder.com/600x350">
+    <span class="tag">Parenting</span>
+    <h3>Is Your Child Ready for Preschool?</h3>
+    <p>Clear signs every parent should know.</p>
+    <a href="#" class="read">Read more →</a>
+  </article>
+
+  <article class="card">
+    <img src="https://via.placeholder.com/600x350">
+    <span class="tag">Activities</span>
+    <h3>5 Simple Learning Activities at Home</h3>
+    <p>Everyday moments that support learning.</p>
+    <a href="#" class="read">Read more →</a>
+  </article>
+</section>
+
+<section class="newsletter">
+  <h3>Weekly Parenting Tips</h3>
+  <p>No spam. Just useful ideas.</p>
+  <form>
+    <input type="email" placeholder="Your email address" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 AniBee Preschool. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
